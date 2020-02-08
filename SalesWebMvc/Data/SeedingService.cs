@@ -33,7 +33,7 @@ namespace SalesWebMvc.Data
 
             Seller s1 = new Seller(1, "Danilo Queiroz", "DaniloQueiroz@gmail.com", new DateTime(2000, 1, 13), 1000, d1);
 
-            SalesRecord r1 = new SalesRecord(1, new DateTime(2018, 09, 25), 11000.0, SaleStatus.Billed, s1);
+            SalesRecord r1 = new SalesRecord(1, new DateTime(2018, 09, 25), 11000.0, SaleStatus.Pago, s1);
 
             _context.Department.AddRange(d1, d2, d3, d4);
             _context.Seller.AddRange(s1);
