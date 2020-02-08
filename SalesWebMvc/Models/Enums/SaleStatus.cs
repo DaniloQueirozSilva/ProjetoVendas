@@ -3,7 +3,7 @@
     public enum SaleStatus : int
     {
         Pendente = 0,
-        Pago = 1,
+        Fechado = 1,
         Cancelado = 2
     }
 }
