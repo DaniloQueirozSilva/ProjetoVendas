@@ -26,10 +26,11 @@ namespace SalesWebMvc.Data
                 return; // DB has been seeded
             }
 
-            Department d1 = new Department(1, "Computers");
-            Department d2 = new Department(2, "Eletronics");
-            Department d3 = new Department(3, "Fashion");
-            Department d4 = new Department(4, "Books");
+            Department d1 = new Department(1, "Eletronicos");
+            Department d2 = new Department(2, "Roupas");
+            Department d3 = new Department(3, "Construção");
+            Department d4 = new Department(4, "Livros");
+            Department d5 = new Department(5, "Brinquedos");
 
             Seller s1 = new Seller(1, "Danilo Queiroz", "DaniloQueiroz@gmail.com", new DateTime(1988, 4, 15), 1000, d1);
             Seller s2 = new Seller(2, "Edson Carlos", "EdsonCarlos@gmail.com", new DateTime(1950, 1, 13), 4502, d2);
@@ -37,6 +38,7 @@ namespace SalesWebMvc.Data
             Seller s4 = new Seller(4, "Solange Silva", "SolangeSilva@gmail.com", new DateTime(1994, 4, 25), 7043, d4);
             Seller s5 = new Seller(5, "Ana Maria", "AnaMaria@gmail.com", new DateTime(1997, 8, 14), 3431, d2);
             Seller s6 = new Seller(6, "João Pedro", "JoãoPedro@gmail.com", new DateTime(2000, 1, 13), 2364, d1);
+            Seller s7 = new Seller(7, "Fernando Souza", "FernandoSouza@gmail.com", new DateTime(1980, 9, 25), 6500, d5);
 
             SalesRecord r1 = new SalesRecord(1, new DateTime(2018, 09, 25), 11000.0, SaleStatus.Fechado, s1);
             SalesRecord r2 = new SalesRecord(2, new DateTime(2019, 09, 25), 15000.0, SaleStatus.Pendente, s2);
@@ -44,11 +46,12 @@ namespace SalesWebMvc.Data
             SalesRecord r4 = new SalesRecord(4, new DateTime(2017, 09, 25), 15621.0, SaleStatus.Fechado, s4);
             SalesRecord r5 = new SalesRecord(5, new DateTime(2020, 01, 25), 8541.0, SaleStatus.Pendente, s5);
             SalesRecord r6 = new SalesRecord(6, new DateTime(2018, 09, 25), 3500.0, SaleStatus.Cancelado, s6);
+            SalesRecord r7 = new SalesRecord(7, new DateTime(2020, 02, 09), 4000.0, SaleStatus.Fechado, s7);
 
 
-            _context.Department.AddRange(d1, d2, d3, d4);
-            _context.Seller.AddRange(s1,s2,s3,s4,s5,s6);
-            _context.SalesRecord.AddRange(r1,r2,r3,r4,r5,r6);
+            _context.Department.AddRange(d1, d2, d3, d4,d5);
+            _context.Seller.AddRange(s1,s2,s3,s4,s5,s6,s7);
+            _context.SalesRecord.AddRange(r1,r2,r3,r4,r5,r6,r7);
 
             _context.SaveChanges();
 
